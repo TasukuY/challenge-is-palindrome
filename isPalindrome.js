@@ -1,17 +1,22 @@
 // Write your code below
 
-//defalut isPalindrome = true.
-//check if the text length is even or odd.
-//if odd -> get the middle index of the text.
-//if it is even check the characters from both ends.
-//if it is even, chec the characters from both ends but skip the middle index.
-//if there is any unmatched chars, return isPandrome = false and break out of the function.
-
 let isPalindrome = (word) => {
-    
+    //set the starting indexes of both ends
+    let leftIndex = 0;
+    let rightIndex = word.length - 1;
+
+    //while lefIndex is less than rightIndex, check each char
+    while(leftIndex < rightIndex){
+        if(word[leftIndex] !== word[rightIndex]){
+            //if there is unmatched char, return false
+            return false;
+        }
+        //change the value of leftIndex & righIndex
+        leftIndex++;
+        rightIndex--;
+    }
+    //if all chars are the same, return true.
     return true;
 }
 
-let isWordLengthEven = wordLength => wordLength % 2 === 0;
 
-let wordMiddleIndex = wordLength => Math.floor(wordLength / 2);
