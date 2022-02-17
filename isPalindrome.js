@@ -19,4 +19,4 @@ let isPalindrome = (word) => {
     return true;
 }
 
-
+console.log(isPalindrome('tenet'));
